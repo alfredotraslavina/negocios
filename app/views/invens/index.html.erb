@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<%= link_to 'Nuevo articulo', new_inven_path %>
+<%= link_to 'Reportes', invens_reporte_path %>
+
+
+<table>
+  <thead>
+    <tr>
+      <th><b>Id</b></th>
+      <th>Nombre objeto</th>
+      <th>Marca</th>
+      <th>Modelo</th>
+      <th>Precio</th>
+      <th>Cantidad</th>
+      <th>Peso</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @invens.each do |inven| %>
+      <tr>
+        <td><%= inven.id %></td>
+        <td><%= inven.nombre_objeto %></td>
+        <td><%= inven.marca %></td>
+        <td><%= inven.modelo %></td>
+        <td><%= inven.precio %></td>
+        <td><%= inven.cantidad %></td>
+        <td><%= inven.peso %></td>
+        <td><%= link_to 'Información', inven %></td>
+        <td><%= link_to 'Editar', edit_inven_path(inven) %></td>
+        <td><%= link_to 'Eliminar', inven, method: :delete, data: { confirm: 'Seguro que quieres eliminarlo?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+

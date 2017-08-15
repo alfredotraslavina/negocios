@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre_objeto: MyString
+  marca: MyString
+  modelo: MyString
+  precio: 9.99
+  cantidad: 1
+  peso: 9.99
+
+two:
+  nombre_objeto: MyString
+  marca: MyString
+  modelo: MyString
+  precio: 9.99
+  cantidad: 1
+  peso: 9.99

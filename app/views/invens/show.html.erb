@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre objeto:</strong>
+  <%= @inven.nombre_objeto %>
+</p>
+
+<p>
+  <strong>Marca:</strong>
+  <%= @inven.marca %>
+</p>
+
+<p>
+  <strong>Modelo:</strong>
+  <%= @inven.modelo %>
+</p>
+
+<p>
+  <strong>Precio:</strong>
+  <%= @inven.precio %>
+</p>
+
+<p>
+  <strong>Cantidad:</strong>
+  <%= @inven.cantidad %>
+</p>
+
+<p>
+  <strong>Peso:</strong>
+  <%= @inven.peso %>
+</p>
+
+<%= link_to 'Editar', edit_inven_path(@inven) %> |
+<%= link_to 'Volver', invens_path %>
+
+

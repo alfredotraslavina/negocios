@@ -1,0 +1,115 @@
+<h2>Reporte Precio</h2>
+
+<table>
+  <thead>
+
+    <tr>
+      <th>Id</th>
+      <th>Nombre objeto</th>
+      <th>Marca</th>
+      <th>Modelo</th>
+      <th><b>Precio</b></th>
+      <th>Cantidad</th>
+      <th>Peso</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @objetosGuardadosPrecio.each do |inven| %>
+      <tr>
+        <td><%= inven.id %></td>
+        <td><%= inven.nombre_objeto %></td>
+        <td><%= inven.marca %></td>
+        <td><%= inven.modelo %></td>
+        <td><b><%= inven.precio %></b></td>
+        <td><%= inven.cantidad %></td>
+        <td><%= inven.peso %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<% invenM = @objetosGuardadosPrecio.first %>
+<% invenMe = @objetosGuardadosPrecio.last %>
+<h3> El objeto más barato es:</h3> <h4><%= invenM.nombre_objeto %> </h4>
+<h3> El objeto más caro es:</h3> <h4><%= invenMe.nombre_objeto %> </h4>
+
+<h2>Reporte Cantidad</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Nombre objeto</th>
+      <th>Marca</th>
+      <th>Modelo</th>
+      <th>Precio</th>
+      <th><b>Cantidad</b></th>
+      <th>Peso</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @objetosGuardadosCantidad.each do |inven| %>
+      <tr>
+        <td><%= inven.id %></td>
+        <td><%= inven.nombre_objeto %></td>
+        <td><%= inven.marca %></td>
+        <td><%= inven.modelo %></td>
+        <td><%= inven.precio %></td>
+        <td><b><%= inven.cantidad %></b></td>
+        <td><%= inven.peso %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<% invenMenos = @objetosGuardadosCantidad.first %>
+<% invenMas = @objetosGuardadosCantidad.last %>
+<h3> El objeto menos Disponible es:</h3> <h4><%= invenMenos.nombre_objeto %> </h4>
+<h3> El objeto Más Disponible es:</h3> <h4><%= invenMas.nombre_objeto %> </h4>
+
+<h2>Reporte Peso</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Nombre objeto</th>
+      <th>Marca</th>
+      <th>Modelo</th>
+      <th>Precio</th>
+      <th>Cantidad</th>
+      <th><b>Peso</b></th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @objetosGuardadosPeso.each do |inven| %>
+      <tr>
+        <td><%= inven.id %></td>
+        <td><%= inven.nombre_objeto %></td>
+        <td><%= inven.marca %></td>
+        <td><%= inven.modelo %></td>
+        <td><%= inven.precio %></td>
+        <td><%= inven.cantidad %></td>
+        <td><b><%= inven.peso %></b></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<% invenMe = @objetosGuardadosPeso.first %>
+<% invenMa = @objetosGuardadosPeso.last %>
+<h3> El objeto que pesa menos es:</h3> <h4><%= invenMe.nombre_objeto %> </h4>
+<h3> El objeto que pesa mas es:</h3> <h4><%= invenMa.nombre_objeto %> </h4>
+
+
+<div style="text-align:center;">
+<%= link_to 'Atrás', invens_path %>
+</div>
+
+<%= Time.now %>
